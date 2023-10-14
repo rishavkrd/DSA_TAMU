@@ -1,3 +1,3 @@
 stackArray:
-	g++ ../test/testStackwithDoubleArray.cpp -o ../test/testStackwithDoubleArray
+	g++ ./test/testStackwithDoubleArray.cpp -o ./testStackwithDoubleArray
 
