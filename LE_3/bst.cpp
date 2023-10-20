@@ -7,7 +7,9 @@ public:
     BST_Node* right;
 
     // Constructor to initialize a node
-    BST_Node(int key) : key(key), left(nullptr), right(nullptr) {}
+    BST_Node(int key) {
+        
+    }
 
     // Insert method to create nodes
     void insert(int key) {
