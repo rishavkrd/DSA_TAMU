@@ -31,7 +31,7 @@ class Graph{
             }
         }
 
-        int* dijkshtra(){
+        int* dijkstra(){
             int *dist = new int[n];
             for(int i = 0; i < n; i++){
                 dist[i] = INT_MAX;
@@ -57,7 +57,7 @@ class Graph{
 
 
 
-void testDijkshtra(){
+void testDijkstra(){
     Graph g(5);
     g.addEdge(0,1,1);
     g.addEdge(1,2,5);
@@ -65,7 +65,7 @@ void testDijkshtra(){
     g.addEdge(3,4,3);
     g.addEdge(1,4,2);
     g.addEdge(0,3,5);
-    int* arr = g.dijkshtra();
+    int* arr = g.dijkstra();
     g.print();
     cout<< "Dijkshtra"<<endl;
     for(int i=0; i<5; i++){
@@ -75,6 +75,6 @@ void testDijkshtra(){
 }
 
 int main(){
-    testDijkshtra();
+    testDijkstra();
     return 0;
 }
