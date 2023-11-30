@@ -117,9 +117,6 @@ public:
     int getSize(){
         return size;
     }
-    // bool isPqEmpty(){
-    //     return size == 0;
-    // }
     int pq_parent(int i){
         return (i-1)/2;
     }
