@@ -110,7 +110,7 @@ private:
     int size;
 public:
     PriorityQueueHeap(){
-        capacity = 10;
+        capacity = 100;
         size = 0;
         arr = new int[capacity];
     }
