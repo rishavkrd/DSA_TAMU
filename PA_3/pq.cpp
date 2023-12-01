@@ -110,16 +110,13 @@ private:
     int size;
 public:
     PriorityQueueHeap(){
-        capacity = 10;
+        capacity = 100;
         size = 0;
         arr = new int[capacity];
     }
     int getSize(){
         return size;
     }
-    // bool isPqEmpty(){
-    //     return size == 0;
-    // }
     int pq_parent(int i){
         return (i-1)/2;
     }
