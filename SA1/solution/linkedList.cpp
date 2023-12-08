@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 // Node class for the individual nodes
 class Node {
 public:
@@ -164,30 +164,8 @@ void remove(int position) {
             std::cout << temp->data << " ";
             temp = temp->next;
         }
+        cout<<"\n";
     }
 };
 
-void testInsertSuccessfull(){
-    LinkedList myLinkedList;
-    myLinkedList.push(1);
-    myLinkedList.push(2);
-    myLinkedList.push(3);
-    myLinkedList.insert(4, 4);
-    myLinkedList.printList();  // Output: 3 2 1 4
-}
 
-void testInsertUnsuccessfull(){
-    LinkedList myLinkedList;
-    myLinkedList.push(1);
-    myLinkedList.push(2);
-    myLinkedList.push(3);
-    myLinkedList.insert(4, 5); // Error message: Position exceeds the size of the linked list.
-    myLinkedList.printList();  // Output: 3 2 1
-}
-
-int main() {
-    testInsertSuccessfull();
-    testInsertUnsuccessfull();
-
-    return 0;
-}
