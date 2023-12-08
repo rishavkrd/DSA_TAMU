@@ -1,3 +1,4 @@
+#define TEST
 #include <stdio.h>
 #include <exception>
 #include <assert.h>

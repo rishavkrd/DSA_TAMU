@@ -49,3 +49,9 @@ void testPqInsert_Size(PriorityQueue pq, int x){
     }
 
 }
+
+#ifndef TEST
+int main(){
+    return 0;
+}
+#endif

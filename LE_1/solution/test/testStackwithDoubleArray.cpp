@@ -1,4 +1,4 @@
-#define MAIN
+#define TEST
 
 #include <iostream>
 #include "../Stack.cpp"
