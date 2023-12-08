@@ -4,6 +4,8 @@
 #include <stdexcept>
 #include <iostream>
 
+using namespace std;
+
 // This is the base class for ArrayStack and DoublingArrayStack. The only 
 // difference between ArrayStack and DoublingArrayStack is the growth 
 // rate. Since stack growth is handled in push(), we declare push() as pure 
@@ -23,17 +25,8 @@ public:
 
     virtual bool isEmpty() = 0;
     virtual int size() = 0;
-
-    // * Returns top element.
-    // * Throw an exception if the stack is empty.
     virtual int top() = 0;
-
-    // * Removes and returns top element.
-    // * Throw an exception if the stack is empty.
     virtual int pop() = 0;
-
-    // * Declared as pure virtual.
-    // * Overload this function in your child class!
     virtual void push (int e) = 0;
 };
 
@@ -162,4 +155,11 @@ public:
 
 };
 
+#endif
+
+#ifndef MAIN
+int main(){
+    cout<<"Hello World"<<endl;
+    return 0;
+}
 #endif

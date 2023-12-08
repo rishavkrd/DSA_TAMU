@@ -7,7 +7,8 @@
 using namespace std;
 
 // The AbstractStack class defies the interface for a stack.
-// Implement all the virtual methods in this class. 
+// Implement all the virtual methods in your child class that extends the AbstractStack 
+// like shown for class StackArrayDouble. 
 
 class AbstractStack {
 private:
@@ -20,19 +21,11 @@ public:
     ~AbstractStack() {
     }
 
+    // * Overload this function in your child class!
     virtual bool isEmpty() = 0;
     virtual int size() = 0;
-
-    // * Returns top element.
-    // * Throw an exception if the stack is empty.
     virtual int top() = 0;
-
-    // * Removes and returns top element.
-    // * Throw an exception if the stack is empty.
     virtual int pop() = 0;
-
-    // * Declared as pure virtual.
-    // * Overload this function in your child class!
     virtual void push (int e) = 0;
 };
 
@@ -41,17 +34,14 @@ public:
 #ifndef STACK_ARRAY_H
 #define STACK_ARRAY_H
 
-class Stack : public AbstractStack{
+class StackArrayDouble : public AbstractStack{
 private:
     int* data;
     int length;
     int topIndex;
 
 public:
-    Stack(){
-    }
-
-    ~Stack(){
+    StackArrayDouble(){
     }
 
     bool isEmpty(){
@@ -75,7 +65,10 @@ public:
 
 };
 #endif
-
+class StackArrayLinear : public AbstractStack{};
+class StackLinkedList : public AbstractStack{};
+#ifndef TEST
 int main(){
     cout<<"Hello World"<<endl;
 }
+#endif
