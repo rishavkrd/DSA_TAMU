@@ -228,7 +228,7 @@ public:
 
 #endif
 
-#ifndef MAIN
+#ifndef TEST
 int main(){
     cout<<"Hello World"<<endl;
     return 0;

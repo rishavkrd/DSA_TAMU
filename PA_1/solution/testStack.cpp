@@ -1,4 +1,4 @@
-#define MAIN
+#define TEST
 
 #include <iostream>
 #include "./Stack.cpp"
@@ -12,16 +12,16 @@ int testStackPush(AbstractStack *s){
     if(s->size() != 3){
         return 0;
     }
-    return 10;
+    return 1;
 }
 int testStackPop(AbstractStack *s){
     s->push(1);
     s->push(2);
     s->push(3);
     if(s->pop() != 3){
-        return 1;
+        return 0;
     }
-    return 10;
+    return 1;
 }
 
 int testStackTop(AbstractStack *s){
@@ -31,47 +31,62 @@ int testStackTop(AbstractStack *s){
     if(s->top() != 10){
         return 0;
     }
-    return 10;
+    return 1;
 }
 
 int testStackEmpty(AbstractStack *s){
-    int score = 0;
-    if(s->isEmpty()){
-        score += 2;
+    if(!s->isEmpty()){
+        return 0;
     }
     s->push(1);
-    if(!s->isEmpty()){
-        score += 3;
+    if(s->isEmpty()){
+        return 0;
     }
     s->pop();
-    if(s->isEmpty()){
-        score += 5;
+    if(!s->isEmpty()){
+        return 0;
     }
-    return score;
+    return 1;
 }
+//test edge case of size doubling
 
-#define MAIN
 int main(){
-    
-    cout<<"Test Stack with Array which Linearly Increases\n";
-    AbstractStack *stackArrayLinear = new StackArrayLinear();
-    cout<<"Test Stack Empty: "<<testStackEmpty(stackArrayLinear)<<endl;
-    cout<<"Test Stack Push: "<<testStackPush(stackArrayLinear)<<endl;
-    cout<<"Test Stack Pop: "<<testStackPop(stackArrayLinear)<<endl;
-    cout<<"Test Stack Top: "<<testStackTop(stackArrayLinear)<<endl;
 
     cout<<"Test Stack with Array which Doubles\n";
+    int score1 = 0;
     AbstractStack *stackArrayDouble = new StackArrayDouble();
-    cout<<"Test Stack Empty: "<<testStackEmpty(stackArrayDouble)<<endl;
-    cout<<"Test Stack Push: "<<testStackPush(stackArrayDouble)<<endl;
-    cout<<"Test Stack Pop: "<<testStackPop(stackArrayDouble)<<endl;
-    cout<<"Test Stack Top: "<<testStackTop(stackArrayDouble)<<endl;
+    score1+=testStackEmpty(stackArrayDouble);
+    cout<<"Test Stack Empty: "<< score1<<endl;
+    score1+=testStackPush(stackArrayDouble);
+    cout<<"Test Stack Push: "<<score1<<endl;
+    score1+=testStackPop(stackArrayDouble);
+    cout<<"Test Stack Pop: "<<score1<<endl;
+    score1+=testStackTop(stackArrayDouble);
+    cout<<"Test Stack Top: "<<score1<<endl;
+
+    cout<<"Test Stack with Array which Linearly Increases\n";
+    AbstractStack *stackArrayLinear = new StackArrayLinear();
+
+    score1+=testStackEmpty(stackArrayLinear);
+    cout<<"Test Stack Empty: "<< score1<<endl;
+    score1+=testStackPush(stackArrayLinear);
+    cout<<"Test Stack Push: "<<score1<<endl;
+    score1+=testStackPop(stackArrayLinear);
+    cout<<"Test Stack Pop: "<<score1<<endl;
+    score1+=testStackTop(stackArrayLinear);
+    cout<<"Test Stack Top: "<<score1<<endl;
 
     cout<<"Test Stack with Linked List\n";
     AbstractStack *stackLinkedList = new StackLinkedList();
-    cout<<"Test Stack Empty: "<<testStackEmpty(stackLinkedList)<<endl;
-    cout<<"Test Stack Push: "<<testStackPush(stackLinkedList)<<endl;
-    cout<<"Test Stack Pop: "<<testStackPop(stackLinkedList)<<endl;
-    cout<<"Test Stack Top: "<<testStackTop(stackLinkedList)<<endl;
+    score1+=testStackEmpty(stackLinkedList);
+    cout<<"Test Stack Empty: "<< score1<<endl;
+    score1+=testStackPush(stackLinkedList);
+    cout<<"Test Stack Push: "<<score1<<endl;
+    score1+=testStackPop(stackLinkedList);
+    cout<<"Test Stack Pop: "<<score1<<endl;
+    score1+=testStackTop(stackLinkedList);
+    cout<<"Test Stack Top: "<<score1<<endl;
+
+    cout << "Total Score: " << score1 <<"/12"<< endl;
     return 0;
 }

@@ -37,7 +37,7 @@ public:
         
     }
 };
-
+#ifndef TEST
 int main() {
     // Example usage of the BST_Node class
     BST_Node* root = new BST_Node(5);
@@ -51,3 +51,4 @@ int main() {
 
     return 0;
 }
+#endif

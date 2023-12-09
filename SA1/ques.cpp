@@ -181,7 +181,7 @@ public:
 };
 
 
-
+#ifndef TEST
 int main() {
     LinkedList myLinkedList;
     myLinkedList.push(1);
@@ -208,3 +208,4 @@ int main() {
 
     return 0;
 }
+#endif
