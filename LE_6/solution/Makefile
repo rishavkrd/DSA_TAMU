@@ -1,2 +1,2 @@
 graph: graph.cpp
-	g++ graph.cpp priority_queue.cpp -o graph
+	g++ test_graph.cpp -o graph

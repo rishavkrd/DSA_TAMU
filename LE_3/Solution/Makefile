@@ -1,2 +1,2 @@
 bst: bst.cpp
-	g++ bst.cpp -o bst
+	g++ bst_test.cpp -o bst

@@ -1,2 +1,2 @@
 sort: sort.cpp
-	g++ sort.cpp -o sort
+	g++ test_sort.cpp -o sort

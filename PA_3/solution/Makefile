@@ -1,2 +1,2 @@
 pq: pq.cpp
-	g++ pq.cpp -o pq
+	g++ pq_test.cpp -o pq

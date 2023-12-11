@@ -1,2 +1,2 @@
 solution: solution.cpp
-	g++ solution.cpp -o solution
+	g++ main.cpp -o main
