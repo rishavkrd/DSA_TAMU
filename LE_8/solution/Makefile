@@ -1,2 +1,2 @@
 skiplist: skiplist.cpp
-	g++ skiplist.cpp -o skiplist
+	g++ test_skiplist.cpp -o skiplist

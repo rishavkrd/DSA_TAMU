@@ -1,2 +1,2 @@
 mergesort: merge_sort.cpp
-	g++ merge_sort.cpp -o merge_sort
+	g++ merge_test.cpp -o merge_sort

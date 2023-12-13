@@ -1,2 +1,2 @@
 sorting: sort.cpp priority_queue.cpp
-	g++ test_sort.cpp -o sort
+	g++ sort.cpp -o sort
